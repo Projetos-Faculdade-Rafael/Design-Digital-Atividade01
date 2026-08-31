@@ -25,14 +25,14 @@ nav{
     padding-right: 40px;
 }
 
-nav a {
+a {
     color: #ffffff;
     text-decoration: none;
     margin: 5px;
     font-weight: bold;
 }
 
-nav a:hover {
+a:hover {
     color: #e30613;
 }
 
