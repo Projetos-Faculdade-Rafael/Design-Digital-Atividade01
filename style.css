@@ -41,9 +41,8 @@ a:hover {
     border-bottom: 2px solid #e30613;
 }
 
-/* Seções com Imagem de Fundo (Hero) */
 .hero-clube {
-    background-image: url('clube-bg.jpg');
+    background-image: url('./imagens/clube-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -52,7 +51,7 @@ a:hover {
 }
 
 .hero-historia {
-    background-image: url('historia-bg.jpg');
+    background-image: url('./imagens/historia-bg.webp');
     background-size: cover;
     background-position: center;
     color: white;
@@ -61,7 +60,7 @@ a:hover {
 }
 
 .hero-m1to {
-    background-image: url('m1to-bg.jpg');
+    background-image: url('./imagens/m1to-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -79,7 +78,6 @@ a:hover {
     margin-bottom: 20px;
 }
 
-/* Botão simples */
 .botao {
     background-color: #e30613;
     color: white;
