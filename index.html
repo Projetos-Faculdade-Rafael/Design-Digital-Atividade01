@@ -1,61 +1,63 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
-  <title>São Paulo FC - O Clube</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="style.css" />
-</head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="logo.png" alt="Escudo SPFC" width="40" />
-        <h2>SÃO PAULO FC</h2>
-      </div>
-      <nav>
-        <a href="index.html" class="link-ativo">O Clube</a>
-        <a href="historia.html">A História</a>
-        <a href="m1to.html">M1TO</a>
-      </nav>
-    </header>
+  <!doctype html>
+  <html lang="pt-br">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+    <title>São Paulo FC - O Clube</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+    <body>
+      <header>
+        <div class="logo">
+          <img src="logo.png" alt="Escudo SPFC" width="40" />
+          <h2>SÃO PAULO FC</h2>
+        </div>
+        <nav>
+          <a href="index.html" class="link-ativo">O Clube</a>
+          <a href="historia.html">A História</a>
+          <a href="m1to.html">M1TO</a>
+        </nav>
+      </header>
 
-    <section class="hero-clube">
-      <h1>A Fé Move Montanhas</h1>
-      <p>
-        Conheça a história e a tradição do Tricolor Paulista, o clube mais
-        vitorioso do Brasil.
-      </p>
-      <a href="#cards" class="botao">Ver Destaques</a>
-    </section>
-
-    <section id="cards" class="secao-cards group relative transition-all duration-300">
-      <div class="bg-white border-solid border border-gray-300 border-t-red-600 border-t-4 p-5 w-75 text-center rounded-[5px] group-hover:z-50 group-hover:min-w-90">
-        <h3>O Morumbi</h3>
+      <section class="hero-clube">
+        <h1>A Fé Move Montanhas</h1>
         <p>
-          O Estádio Cícero Pompeu de Toledo é a nossa casa sagrada e palco de
-          grandes conquistas históricas desde 1960.
+          Conheça a história e a tradição do Tricolor Paulista, o clube mais
+          vitorioso do Brasil.
         </p>
-      </div>
-      <div class="bg-white border-solid border border-gray-300 border-t-red-600 border-t-4 p-5 w-75 text-center rounded-[5px]">
-        <h3>3x Mundial</h3>
-        <p> 
-          O São Paulo é o único clube brasileiro que conquistou 3 títulos
-          mundiais de clubes (1992, 1993 e 2005).
-        </p>
-      </div>
-      <div class="bg-white border-solid border border-gray-300 border-t-red-600 border-t-4 p-5 w-75 text-center rounded-[5px]">
-        <h3 class="text-black mb-2,5 ">Soberano</h3>
-        <p>
-          Uma galeria pesada com 6 Campeonatos Brasileiros, 3 Copas Libertadores
-          e 1 Copa do Brasil.
-        </p>
-      </div>
-    </section>
+        <a href="#cards" class="botao">Ver Destaques</a>
+      </section>
 
-    <footer>
-      <p>
-        Desenvolvido para a aula de Design digital &copy; 2026 - São Paulo FC
-      </p>
-    </footer>
-  </body>
-</html>
+      <section class="flex justify-center p-10 gap-[7vh]">
+        <div class="card group relative bg-white border-solid border border-gray-300 border-t-red-600 border-t-4 p-5 w-75 flex justify-center items-center rounded-[5px] transition-all duration-300 hover:-translate-y-3 hover:scale-120 shadow-md hover:shadow-xl group-hover:transition-all group-hover:duration-300">
+          <h3 class="z-20 absolute group-hover:z-0 group-hover:text-white">
+            O Morumbi
+          </h3>
+          <p class="z-10 absolute text-white group-hover:text-black">
+            O Estádio Cícero Pompeu de Toledo é a nossa casa sagrada e palco de
+            grandes conquistas históricas desde 1960.
+          </p>
+        </div>
+        <div class="bg-white border-solid border border-gray-300 border-t-red-600 border-t-4 p-5 w-75 text-center rounded-[5px]">
+          <h3>3x Mundial</h3>
+          <p> 
+            O São Paulo é o único clube brasileiro que conquistou 3 títulos
+            mundiais de clubes (1992, 1993 e 2005).
+          </p>
+        </div>
+        <div class="bg-white border-solid border border-gray-300 border-t-red-600 border-t-4 p-5 w-75 text-center rounded-[5px]">
+          <h3 class="text-black mb-2.5 ">Soberano</h3>
+          <p>
+            Uma galeria pesada com 6 Campeonatos Brasileiros, 3 Copas Libertadores
+            e 1 Copa do Brasil.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          Desenvolvido para a aula de Design digital &copy; 2026 - São Paulo FC
+        </p>
+      </footer>
+    </body>
+  </html>
