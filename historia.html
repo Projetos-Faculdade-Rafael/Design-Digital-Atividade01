@@ -2,37 +2,72 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>São Paulo FC - A História</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header>
-      <div class="logo">
+
+  <body class="bg-[#f4f4f4] min-h-screen m-0 flex flex-col">
+    <!-- Header -->
+    <header
+      class="w-full bg-black text-white flex flex-col items-center gap-2 py-3
+             md:flex-row md:justify-between md:py-0 md:h-[11vh]"
+    >
+      <div class="flex items-center gap-2.5 md:pl-10">
         <img src="logo.png" alt="Escudo SPFC" width="40" />
-        <h2>SÃO PAULO FC</h2>
+        <h2 class="text-lg font-bold">SÃO PAULO FC</h2>
       </div>
-      <nav>
-        <a href="index.html">O Clube</a>
-        <a href="historia.html" class="link-ativo">A História</a>
-        <a href="m1to.html">M1TO</a>
+      <nav class="md:pr-10">
+        <a
+          href="index.html"
+          class="text-white no-underline mx-1 font-bold hover:text-[#e30613]"
+        >
+          O Clube
+        </a>
+        <a
+          href="historia.html"
+          class="text-[#e30613] border-b-2 border-[#e30613] no-underline mx-1 font-bold"
+        >
+          A História
+        </a>
+        <a
+          href="m1to.html"
+          class="text-white no-underline mx-1 font-bold hover:text-[#e30613]"
+        >
+          M1TO
+        </a>
       </nav>
     </header>
 
-    <section class="hero-historia">
-      <h1>Nossa História</h1>
-      <p>Conheça a trajetória vitoriosa do Clube da Fé.</p>
+    <!-- Hero -->
+    <section
+      class="bg-cover bg-center text-white text-center py-16 px-5 md:py-20"
+      style="background-image: url('historia-bg.webp')"
+    >
+      <h1 class="text-2xl font-bold mb-2.5 md:text-[38px]">Nossa História</h1>
+      <p class="text-base mb-5 md:text-lg">
+        Conheça a trajetória vitoriosa do Clube da Fé.
+      </p>
     </section>
 
-    <section class="conteudo">
-      <h2>Como Tudo Começou</h2>
-      <p>
+    <!-- Conteúdo -->
+    <section
+      class="bg-white p-6 mx-4 my-6 rounded
+             md:p-[30px] md:mx-auto md:my-[30px] md:max-w-[900px]"
+    >
+      <h2 class="text-2xl font-bold text-[#e30613] mt-4 mb-2.5">
+        Como Tudo Começou
+      </h2>
+      <p class="leading-relaxed mb-4">
         O São Paulo Futebol Clube foi fundado originalmente em 1930 e refundado
         em 1935. Ficou mundialmente conhecido como o "Clube da Fé" devido à sua
         capacidade de superação em momentos difíceis.
       </p>
 
-      <h2>A Era Dourada de Telê Santana</h2>
-      <p>
+      <h2 class="text-2xl font-bold text-[#e30613] mt-4 mb-2.5">
+        A Era Dourada de Telê Santana
+      </h2>
+      <p class="leading-relaxed mb-4">
         Nos anos 90, sob o comando do mestre Telê Santana, o São Paulo dominou o
         futebol sul-americano e mundial, conquistando o bicampeonato da
         Libertadores e do Mundial Interclubes em 1992 e 1993, vencendo gigantes
@@ -40,7 +75,8 @@
       </p>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-4 mt-auto">
       <p>
         Desenvolvido para a aula de Design digital &copy; 2026 - São Paulo FC
       </p>
