@@ -1,5 +1,1 @@
-/* 
-  Todos os estilos foram migrados para classes utilitárias 
-  do Tailwind CSS diretamente nos arquivos HTML.
-  Este arquivo está vazio propositalmente.
-*/
+@import "tailwindcss"
