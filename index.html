@@ -5,120 +5,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>São Paulo FC - O Clube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-[#f4f4f4] min-h-screen m-0 flex flex-col">
-  <header class="flex w-full bg-neutral-950 justify-between items-center gap-2 py-3 px-7 text-white
-             md:flex md:justify-between md:py-0 md:h-[9vh]">
+<body class="min-h-screen flex flex-col">
 
-    <div class="flex items-center gap-2.5 md:pl-10">
-      <img src="./img/logo.png" alt="Escudo SPFC" width="40" />
-      <h2 class="text-lg font-bold">SÃO PAULO FC</h2>
+  <!-- Masthead -->
+  <header class="px-5 pt-6 max-w-6xl w-full mx-auto">
+    <div class="rotulo flex justify-between border-b fio pb-2 text-(--legenda)">
+      <span>Edição Histórica</span>
+      <span>Desde 1930</span>
     </div>
 
-    <nav class="hidden md:flex pr-10">
-      <a href="index.html" class="text-[#e30613] border-b-2 border-[#e30613] no-underline mx-1 font-bold">
-        O Clube
+    <div class="flex items-center justify-between gap-4 py-4">
+      <a href="index.html" class="flex items-center gap-3 no-underline text-(--tinta)">
+        <img src="./img/logo.png" alt="Escudo do São Paulo FC" width="44" />
+        <span class="titulo text-3xl md:text-5xl font-black tracking-tight">São Paulo FC</span>
       </a>
-      <a href="historia.html" class="text-white no-underline mx-1 font-bold hover:text-[#e30613]">
-        A História
-      </a>
-      <a href="m1to.html" class="text-white no-underline mx-1 font-bold hover:text-[#e30613]">
-        M1TO
-      </a>
-    </nav>
 
-    <details class="relative md:hidden">
-        <summary class="cursor-pointer list-none text-2xl">
-            ☰
-        </summary>
-
-        <nav class="absolute right-0 top-full mt-2 flex w-40 flex-col gap-4 rounded-lg bg-white p-4 shadow-lg">
-          <a href="index.html" class="text-[#e30613] border-b-2 border-[#e30613] no-underline mx-1 font-bold">
-            O Clube
-          </a>
-          <a href="historia.html" class="text-black no-underline mx-1 font-bold hover:text-[#e30613]">
-            A História
-          </a>
-          <a href="m1to.html" class="text-black no-underline mx-1 font-bold hover:text-[#e30613]">
-            M1TO
-          </a>
+      <details class="relative md:hidden">
+        <summary class="rotulo cursor-pointer list-none border fio px-3 py-2">Menu</summary>
+        <nav class="rotulo absolute right-0 top-full mt-2 flex w-44 flex-col gap-4 bg-(--papel) border fio p-4 z-10">
+          <a href="index.html" class="text-(--verm) underline underline-offset-4">O Clube</a>
+          <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">A História</a>
+          <a href="m1to.html" class="text-(--tinta) no-underline hover:text-(--verm)">M1TO</a>
         </nav>
+      </details>
+    </div>
 
-    </details>
-
+    <nav class="rotulo hidden md:flex gap-8 border-y-2 fio py-3">
+      <a href="index.html" class="text-(--verm) underline underline-offset-4 decoration-2">O Clube</a>
+      <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">A História</a>
+      <a href="m1to.html" class="text-(--tinta) no-underline hover:text-(--verm)">M1TO</a>
+    </nav>
   </header>
 
-  <section class="flex flex-col bg-cover bg-center text-white justify-center text-center py-16 px-5 md:h-[50vh]"
-    style="background-image: url('./img/clube-bg.jpg')">
-    <h1 class="text-2xl font-bold mb-2.5 md:text-[38px]">
-      A Fé Move Montanhas
-    </h1>
-    <p class="text-base mb-5 md:text-lg">
-      Conheça a história e a tradição do Tricolor Paulista, o clube mais
-      vitorioso do Brasil.
-    </p>
-    <a href="#cards" class="bg-[#e30613] text-white py-2.5 px-5 no-underline rounded inline-block
-               font-bold hover:bg-[#c00510]">
-      Ver Destaques
-    </a>
-  </section>
+  <main class="max-w-6xl w-full mx-auto px-5">
 
-  <section id="cards" class="flex flex-col items-center py-10 px-5 gap-5
-             md:flex-row md:justify-center">
+    <!-- Capa -->
+    <section class="grid gap-8 py-10 md:grid-cols-12 md:py-14 border-b fio">
+      <div class="md:col-span-7 flex flex-col justify-center">
+        <p class="rotulo text-(--verm) mb-4">Capa · O Clube</p>
+        <h1 class="titulo text-5xl md:text-7xl font-black leading-[0.95] mb-6">
+          A Fé Move <em class="text-(--verm)">Montanhas</em>
+        </h1>
+        <p class="text-lg md:text-xl leading-relaxed text-(--legenda) mb-8 max-w-prose">
+          Conheça a história e a tradição do Tricolor Paulista, o clube mais
+          vitorioso do Brasil.
+        </p>
+        <a href="#destaques" class="rotulo self-start bg-(--tinta) text-white px-6 py-3 no-underline
+                 hover:bg-(--verm) transition-colors">
+          Ler os destaques →
+        </a>
+      </div>
 
-    <div class="group relative bg-white border border-gray-300 border-t-4
-               border-t-[#e30613] rounded p-5 w-full max-w-[300px] md:w-[300px]
-               h-32 flex justify-center items-center shadow-md
-               transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <h3 class="absolute text-xl font-bold transition-opacity duration-300
-                 group-hover:opacity-0">
-        O Morumbi
-      </h3>
-      <p class="absolute text-sm text-center px-3 opacity-0
-                 transition-opacity duration-300 group-hover:opacity-100">
-        O Estádio Cícero Pompeu de Toledo é a nossa casa sagrada e palco de
-        grandes conquistas históricas desde 1960.
-      </p>
-    </div>
+      <figure class="md:col-span-5">
+        <img src="./img/clube-bg.jpg" alt="Escudo do São Paulo FC sobre fundo vermelho e preto"
+          class="w-full aspect-[4/5] object-cover object-[82%_center]" />
+        <figcaption class="text-sm italic text-(--legenda) mt-2 border-t fio pt-2">
+          O escudo tricolor: vermelho, branco e preto desde 1930.
+        </figcaption>
+      </figure>
+    </section>
 
-    <div class="group relative bg-white border border-gray-300 border-t-4
-               border-t-[#e30613] rounded p-5 w-full max-w-[300px] md:w-[300px]
-               h-32 flex justify-center items-center shadow-md
-               transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <h3 class="absolute text-xl font-bold transition-opacity duration-300
-                 group-hover:opacity-0">
-        3x Mundial
-      </h3>
-      <p class="absolute text-sm text-center px-3 opacity-0
-                 transition-opacity duration-300 group-hover:opacity-100">
-        O São Paulo é o único clube brasileiro que conquistou 3 títulos
-        mundiais de clubes (1992, 1993 e 2005).
-      </p>
-    </div>
+    <!-- Destaques -->
+    <section id="destaques" class="py-12">
+      <h2 class="rotulo mb-8">Nesta edição</h2>
 
-    <div class="group relative bg-white border border-gray-300 border-t-4
-               border-t-[#e30613] rounded p-5 w-full max-w-[300px] md:w-[300px]
-               h-32 flex justify-center items-center shadow-md
-               transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <h3 class="absolute text-xl font-bold transition-opacity duration-300
-                 group-hover:opacity-0">
-        Soberano
-      </h3>
-      <p class="absolute text-sm text-center px-3 opacity-0
-                 transition-opacity duration-300 group-hover:opacity-100">
-        Uma galeria pesada com 6 Campeonatos Brasileiros, 3 Copas Libertadores
-        e 1 Copa do Brasil.
-      </p>
-    </div>
-  </section>
+      <div class="grid md:grid-cols-3 md:divide-x divide-(--tinta)">
+        <article class="py-6 border-t fio md:border-t-0 md:py-0 md:pr-8">
+          <span class="titulo text-6xl font-black text-(--verm)">01</span>
+          <h3 class="titulo text-2xl font-bold mt-2 mb-3">O Morumbi</h3>
+          <p class="leading-relaxed">
+            O Estádio Cícero Pompeu de Toledo é a nossa casa sagrada e palco de
+            grandes conquistas históricas desde 1960.
+          </p>
+        </article>
 
-  <footer class="bg-black text-white text-center p-4 mt-auto">
-    <p>
-      Desenvolvido para a aula de Design digital &copy; 2026 - São Paulo FC
-    </p>
+        <article class="py-6 border-t fio md:border-t-0 md:py-0 md:px-8">
+          <span class="titulo text-6xl font-black text-(--verm)">02</span>
+          <h3 class="titulo text-2xl font-bold mt-2 mb-3">3x Mundial</h3>
+          <p class="leading-relaxed">
+            O São Paulo é o único clube brasileiro que conquistou 3 títulos
+            mundiais de clubes (1992, 1993 e 2005).
+          </p>
+        </article>
+
+        <article class="py-6 border-t fio md:border-t-0 md:py-0 md:pl-8">
+          <span class="titulo text-6xl font-black text-(--verm)">03</span>
+          <h3 class="titulo text-2xl font-bold mt-2 mb-3">Soberano</h3>
+          <p class="leading-relaxed">
+            Uma galeria pesada com 6 Campeonatos Brasileiros, 3 Copas Libertadores
+            e 1 Copa do Brasil.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-auto border-t-2 fio max-w-6xl w-full mx-auto px-5 py-6 rotulo
+                 flex flex-col gap-2 md:flex-row md:justify-between text-(--legenda)">
+    <span>São Paulo FC · Edição Histórica</span>
+    <span>Desenvolvido para a aula de Design Digital &copy; 2026</span>
   </footer>
 </body>
 

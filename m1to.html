@@ -1,136 +1,123 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>São Paulo FC - M1TO</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
 
-  <body class="bg-[#f4f4f4] min-h-screen m-0 flex flex-col">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>São Paulo FC - M1TO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <header class="flex w-full bg-neutral-950 justify-between items-center gap-2 py-3 px-7 text-white
-             md:flex md:justify-between md:py-0 md:h-[11vh]">
+<body class="min-h-screen flex flex-col">
 
-    <div class="flex items-center gap-2.5 md:pl-10">
-      <img src="./img/logo.png" alt="Escudo SPFC" width="40" />
-      <h2 class="text-lg font-bold">SÃO PAULO FC</h2>
+  <!-- Masthead -->
+  <header class="px-5 pt-6 max-w-6xl w-full mx-auto">
+    <div class="rotulo flex justify-between border-b fio pb-2 text-(--legenda)">
+      <span>Edição Histórica</span>
+      <span>Desde 1930</span>
     </div>
 
-    <nav class="hidden md:flex pr-10">
-      <a href="index.html" class="text-white no-underline mx-1 font-bold">
-        O Clube
+    <div class="flex items-center justify-between gap-4 py-4">
+      <a href="index.html" class="flex items-center gap-3 no-underline text-(--tinta)">
+        <img src="./img/logo.png" alt="Escudo do São Paulo FC" width="44" />
+        <span class="titulo text-3xl md:text-5xl font-black tracking-tight">São Paulo FC</span>
       </a>
-      <a href="historia.html" class="text-white no-underline mx-1 font-bold hover:text-[#e30613]">
-        A História
-      </a>
-      <a href="m1to.html" class="text-[#e30613] border-b-2 border-[#e30613] no-underline mx-1 font-bold hover:text-[#e30613]">
-        M1TO
-      </a>
-    </nav>
 
-    <details class="relative md:hidden">
-        <summary class="cursor-pointer list-none text-2xl">
-            ☰
-        </summary>
-
-        <nav class="absolute right-0 top-full mt-2 flex w-40 flex-col gap-4 rounded-lg bg-white p-4 shadow-lg">
-          <a href="index.html" class="text-black no-underline mx-1 font-bold hover:text-[#e30613]">
-            O Clube
-          </a>
-          <a href="historia.html" class="text-black no-underline mx-1 font-bold hover:text-[#e30613]">
-            A História
-          </a>
-          <a href="m1to.html" class="text-[#e30613] border-b-2 border-[#e30613] no-underline mx-1 font-bold">
-            M1TO
-          </a>
+      <details class="relative md:hidden">
+        <summary class="rotulo cursor-pointer list-none border fio px-3 py-2">Menu</summary>
+        <nav class="rotulo absolute right-0 top-full mt-2 flex w-44 flex-col gap-4 bg-(--papel) border fio p-4 z-10">
+          <a href="index.html" class="text-(--tinta) no-underline hover:text-(--verm)">O Clube</a>
+          <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">A História</a>
+          <a href="m1to.html" class="text-(--verm) underline underline-offset-4">M1TO</a>
         </nav>
+      </details>
+    </div>
 
-    </details>
-
+    <nav class="rotulo hidden md:flex gap-8 border-y-2 fio py-3">
+      <a href="index.html" class="text-(--tinta) no-underline hover:text-(--verm)">O Clube</a>
+      <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">A História</a>
+      <a href="m1to.html" class="text-(--verm) underline underline-offset-4 decoration-2">M1TO</a>
+    </nav>
   </header>
 
-    <section
-      class="bg-cover bg-center text-white text-center py-16 px-5 md:py-20"
-      style="background-image: url('./img/m1to-bg.jpg')"
-    >
-      <h1 class="text-2xl font-bold mb-2.5 md:text-[38px]">Rogério Ceni</h1>
-      <p class="text-base mb-5 md:text-lg">
-        131 gols e 25 anos de dedicação ao Tricolor.
-      </p>
-    </section>
+  <main class="max-w-6xl w-full mx-auto px-5">
 
-    <section
-      class="flex flex-col gap-5 p-5 mx-auto max-w-[1000px]
-             md:flex-row md:p-[30px]"
-    >
+    <!-- Perfil -->
+    <section class="grid gap-8 py-10 md:grid-cols-12 md:py-14 border-b fio">
+      <figure class="md:col-span-7">
+        <img src="./img/m1to-bg.jpg" alt="Rogério Ceni, de camisa amarela número 01, cobrando falta diante da barreira"
+          class="w-full aspect-[4/3] object-cover object-right" />
+        <figcaption class="text-sm italic text-(--legenda) mt-2 border-t fio pt-2">
+          Rogério Ceni cobra falta: especialidade do goleiro artilheiro.
+        </figcaption>
+      </figure>
 
-      <div class="flex-1 bg-white p-5 rounded">
-        <h2 class="text-2xl font-bold text-[#e30613] mb-2.5">
-          O Goleiro Artilheiro
-        </h2>
-        <p class="leading-relaxed mb-2.5">
+      <div class="md:col-span-5 flex flex-col justify-center">
+        <p class="rotulo text-(--verm) mb-4">Perfil · M1TO</p>
+        <h1 class="titulo text-5xl md:text-6xl font-black leading-[0.95] mb-4">Rogério Ceni</h1>
+        <p class="text-lg italic text-(--legenda) mb-6">
+          131 gols e 25 anos de dedicação ao Tricolor.
+        </p>
+
+        <h2 class="titulo text-2xl font-bold mb-3">O Goleiro Artilheiro</h2>
+        <p class="dropcap leading-relaxed mb-4">
           Rogério Ceni é o maior ídolo da história do São Paulo FC. Ele defendeu
           o clube por 25 anos seguidos e se tornou o goleiro com maior número de
           gols na história do futebol mundial, marcando 131 gols de falta e
           pênalti.
         </p>
-        <p class="leading-relaxed mb-2.5">
+        <p class="leading-relaxed">
           Ele levantou as taças da Libertadores e do Mundial de 2005 como o
           grande capitão da equipe.
         </p>
       </div>
-
-      <div class="flex-1 bg-white p-5 rounded border-t-4 border-t-black">
-        <h2 class="text-2xl font-bold mb-4">Deixe sua mensagem ao M1TO</h2>
-        <form action="#" method="post">
-          <label for="nome" class="block mt-2.5 font-bold">Seu Nome:</label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Digite seu nome"
-            required
-            class="w-full p-2 mt-1 border border-gray-300 rounded"
-          />
-
-          <label for="email" class="block mt-2.5 font-bold">Seu E-mail:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Digite seu e-mail"
-            required
-            class="w-full p-2 mt-1 border border-gray-300 rounded"
-          />
-
-          <label for="msg" class="block mt-2.5 font-bold">
-            Sua Mensagem:
-          </label>
-          <textarea
-            id="msg"
-            name="msg"
-            rows="4"
-            placeholder="Escreva sua mensagem aqui..."
-            required
-            class="w-full p-2 mt-1 border border-gray-300 rounded"
-          ></textarea>
-
-          <button
-            type="submit"
-            class="bg-[#e30613] text-white border-none py-2.5 px-4 mt-4
-                   rounded cursor-pointer font-bold hover:bg-[#c00510]"
-          >
-            Enviar Mensagem
-          </button>
-        </form>
-      </div>
     </section>
-]
-    <footer class="bg-black text-white text-center p-4 mt-auto">
-      <p>
-        Desenvolvido para a aula de Design digital &copy; 2026 - São Paulo FC
-      </p>
-    </footer>
-  </body>
+
+    <!-- Cartas à Redação (formulário) -->
+    <section class="py-12 max-w-2xl mx-auto">
+      <p class="rotulo text-(--verm) mb-3">Cartas à Redação</p>
+      <h2 class="titulo text-4xl font-black mb-2">Deixe sua mensagem ao M1TO</h2>
+      <p class="italic text-(--legenda) mb-8">As melhores cartas entram na próxima edição.</p>
+
+      <form action="#" method="post" class="flex flex-col gap-6">
+        <div>
+          <label for="nome" class="rotulo block mb-1">Seu Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required
+            class="w-full bg-transparent border-0 border-b-2 border-(--tinta) py-2 text-lg
+                   focus:border-(--verm) placeholder:text-(--legenda)" />
+        </div>
+
+        <div>
+          <label for="email" class="rotulo block mb-1">Seu E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required
+            class="w-full bg-transparent border-0 border-b-2 border-(--tinta) py-2 text-lg
+                   focus:border-(--verm) placeholder:text-(--legenda)" />
+        </div>
+
+        <div>
+          <label for="msg" class="rotulo block mb-1">Sua Mensagem</label>
+          <textarea id="msg" name="msg" rows="4" placeholder="Escreva sua mensagem aqui..." required
+            class="w-full bg-transparent border-0 border-b-2 border-(--tinta) py-2 text-lg
+                   focus:border-(--verm) placeholder:text-(--legenda)"></textarea>
+        </div>
+
+        <button type="submit" class="rotulo self-start bg-(--tinta) text-white px-8 py-3 cursor-pointer
+                 hover:bg-(--verm) transition-colors">
+          Enviar carta →
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="mt-auto border-t-2 fio max-w-6xl w-full mx-auto px-5 py-6 rotulo
+                 flex flex-col gap-2 md:flex-row md:justify-between text-(--legenda)">
+    <span>São Paulo FC · Edição Histórica</span>
+    <span>Desenvolvido para a aula de Design Digital &copy; 2026</span>
+  </footer>
+</body>
+
 </html>
