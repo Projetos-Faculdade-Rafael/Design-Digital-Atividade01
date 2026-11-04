@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>São Paulo FC - O Clube</title>
+  <title>Placar Diário - Capa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
@@ -14,103 +14,137 @@
 
 <body class="min-h-screen flex flex-col">
 
-  <!-- Masthead -->
-  <header class="px-5 pt-6 max-w-6xl w-full mx-auto">
-    <div class="rotulo flex justify-between border-b fio pb-2 text-(--legenda)">
-      <span>Edição Histórica</span>
-      <span>Desde 1930</span>
+  <div class="bg-(--tinta) text-white">
+    <div class="ticker max-w-[1440px] mx-auto px-[4vw] py-2 flex gap-8 whitespace-nowrap rotulo">
+      <span class="text-(--verm) font-bold">Champions</span>
+      <span>Man United 3 × 2 Roma</span>
+      <span>Barcelona 3 × 0 Aston Villa</span>
+      <span>PSG 6 × 0 Villarreal</span>
+      <span>Atlético 0 × 2 Bayern</span>
+      <span>Inter 3 × 0 Feyenoord</span>
+    </div>
+  </div>
+
+  <header class="max-w-[1440px] w-full mx-auto px-[4vw] pt-5">
+    <div class="rotulo flex justify-between gap-4 border-b fio pb-2 text-(--legenda)">
+      <span>Quarta-feira, 4 de novembro de 2026</span>
+      <span class="hidden sm:inline">Edição nº 1</span>
     </div>
 
-    <div class="flex items-center justify-between gap-4 py-4">
-      <a href="index.html" class="flex items-center gap-3 no-underline text-(--tinta)">
-        <img src="./img/logo.png" alt="Escudo do São Paulo FC" width="44" />
-        <span class="titulo text-3xl md:text-5xl font-black tracking-tight">São Paulo FC</span>
+    <div class="flex items-center justify-between md:justify-center gap-4 py-4 md:py-6">
+      <a href="index.html" class="titulo marca font-black tracking-tight no-underline text-(--tinta)">
+        Placar <em class="text-(--verm)">Diário</em>
       </a>
 
       <details class="relative md:hidden">
         <summary class="rotulo cursor-pointer list-none border fio px-3 py-2">Menu</summary>
-        <nav class="rotulo absolute right-0 top-full mt-2 flex w-44 flex-col gap-4 bg-(--papel) border fio p-4 z-10">
-          <a href="index.html" class="text-(--verm) underline underline-offset-4">O Clube</a>
-          <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">A História</a>
-          <a href="m1to.html" class="text-(--tinta) no-underline hover:text-(--verm)">M1TO</a>
+        <nav class="rotulo absolute right-0 top-full mt-2 flex w-52 flex-col gap-4 bg-(--papel) border fio p-4 z-10">
+          <a href="index.html" class="text-(--verm) underline underline-offset-4">Capa</a>
+          <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">Quem Somos</a>
+          <a href="m1to.html" class="text-(--tinta) no-underline hover:text-(--verm)">Envie sua Notícia</a>
         </nav>
       </details>
     </div>
 
-    <nav class="rotulo hidden md:flex gap-8 border-y-2 fio py-3">
-      <a href="index.html" class="text-(--verm) underline underline-offset-4 decoration-2">O Clube</a>
-      <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">A História</a>
-      <a href="m1to.html" class="text-(--tinta) no-underline hover:text-(--verm)">M1TO</a>
+    <nav class="rotulo hidden md:flex justify-center gap-12 border-y-2 fio py-3">
+      <a href="index.html" class="text-(--verm) underline underline-offset-4 decoration-2">Capa</a>
+      <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">Quem Somos</a>
+      <a href="m1to.html" class="text-(--tinta) no-underline hover:text-(--verm)">Envie sua Notícia</a>
     </nav>
   </header>
 
-  <main class="max-w-6xl w-full mx-auto px-5">
+  <main class="max-w-[1440px] w-full mx-auto px-[4vw]">
 
-    <!-- Capa -->
-    <section class="grid gap-8 py-10 md:grid-cols-12 md:py-14 border-b fio">
-      <div class="md:col-span-7 flex flex-col justify-center">
-        <p class="rotulo text-(--verm) mb-4">Capa · O Clube</p>
-        <h1 class="titulo text-5xl md:text-7xl font-black leading-[0.95] mb-6">
-          A Fé Move <em class="text-(--verm)">Montanhas</em>
-        </h1>
-        <p class="text-lg md:text-xl leading-relaxed text-(--legenda) mb-8 max-w-prose">
-          Conheça a história e a tradição do Tricolor Paulista, o clube mais
-          vitorioso do Brasil.
-        </p>
-        <a href="#destaques" class="rotulo self-start bg-(--tinta) text-white px-6 py-3 no-underline
-                 hover:bg-(--verm) transition-colors">
-          Ler os destaques →
-        </a>
-      </div>
-
-      <figure class="md:col-span-5">
-        <img src="./img/clube-bg.jpg" alt="Escudo do São Paulo FC sobre fundo vermelho e preto"
-          class="w-full aspect-[4/5] object-cover object-[82%_center]" />
-        <figcaption class="text-sm italic text-(--legenda) mt-2 border-t fio pt-2">
-          O escudo tricolor: vermelho, branco e preto desde 1930.
-        </figcaption>
+    <article class="grid gap-6 lg:gap-10 py-8 md:py-12 lg:grid-cols-12 border-b fio">
+      <figure class="lg:col-span-7">
+        <img src="./img/noticias/noticia1.jpg" alt="Jogadores do Palmeiras comemorando à beira do campo"
+          class="w-full aspect-[16/10] object-cover" />
+        <figcaption class="text-sm italic text-(--legenda) mt-2">Foto: Terra</figcaption>
       </figure>
-    </section>
 
-    <!-- Destaques -->
-    <section id="destaques" class="py-12">
-      <h2 class="rotulo mb-8">Nesta edição</h2>
+      <div class="lg:col-span-5 flex flex-col justify-center">
+        <p class="rotulo text-(--verm) mb-3">Libertadores · Manchete</p>
+        <h1 class="titulo manchete font-black mb-5">
+          Palmeiras e Estudiantes decidem a América em Montevidéu
+        </h1>
+        <p class="dropcap leading-relaxed mb-4">
+          A final da Libertadores está marcada para 28 de novembro, no Estádio
+          Centenário. O Verdão chegou lá depois de passar pelo Fluminense nos
+          pênaltis, enquanto os argentinos despacharam o Flamengo, que ainda
+          tentou reverter a eliminação na Conmebol, sem sucesso.
+        </p>
+        <p class="leading-relaxed text-(--legenda)">
+          Os dois clubes voltam a se encontrar numa decisão continental 58 anos
+          depois do duelo de 1968.
+        </p>
+        <p class="rotulo text-(--legenda) mt-6">4 nov 2026</p>
+      </div>
+    </article>
 
-      <div class="grid md:grid-cols-3 md:divide-x divide-(--tinta)">
-        <article class="py-6 border-t fio md:border-t-0 md:py-0 md:pr-8">
-          <span class="titulo text-6xl font-black text-(--verm)">01</span>
-          <h3 class="titulo text-2xl font-bold mt-2 mb-3">O Morumbi</h3>
+    <section class="py-8 md:py-12">
+      <h2 class="rotulo mb-6">Mais notícias</h2>
+
+      <div class="grid gap-x-8 gap-y-10 sm:grid-cols-2 xl:grid-cols-4">
+        <article class="border-t-2 fio pt-4">
+          <img src="./img/noticias/noticia2.jpg" alt="Matheus Cunha comemora gol sem camisa pelo Manchester United"
+            class="w-full aspect-[4/3] object-cover object-[35%_center] mb-2" />
+          <p class="text-xs italic text-(--legenda) mb-3">Foto: ESPN</p>
+          <p class="rotulo text-(--verm) mb-2">Champions League</p>
+          <h3 class="titulo titulo-card font-bold mb-3">Cunha decide e United vira para cima da Roma</h3>
           <p class="leading-relaxed">
-            O Estádio Cícero Pompeu de Toledo é a nossa casa sagrada e palco de
-            grandes conquistas históricas desde 1960.
+            Perdendo por 2 a 0 em Old Trafford, o Manchester United reagiu e
+            venceu por 3 a 2, com dois gols de Matheus Cunha nos minutos finais.
           </p>
+          <p class="rotulo text-(--legenda) mt-4">3 nov 2026</p>
         </article>
 
-        <article class="py-6 border-t fio md:border-t-0 md:py-0 md:px-8">
-          <span class="titulo text-6xl font-black text-(--verm)">02</span>
-          <h3 class="titulo text-2xl font-bold mt-2 mb-3">3x Mundial</h3>
+        <article class="border-t-2 fio pt-4">
+          <img src="./img/noticias/noticia3.webp" alt="Estádio do Maracanã vazio com gramado e arquibancadas coloridas"
+            class="w-full aspect-[4/3] object-cover mb-2" />
+          <p class="text-xs italic text-(--legenda) mb-3">Foto: NC News</p>
+          <p class="rotulo text-(--verm) mb-2">Brasileirão</p>
+          <h3 class="titulo titulo-card font-bold mb-3">Reta final esquenta e título pode sair no confronto direto</h3>
           <p class="leading-relaxed">
-            O São Paulo é o único clube brasileiro que conquistou 3 títulos
-            mundiais de clubes (1992, 1993 e 2005).
+            A 34ª rodada tem clássicos como São Paulo x Corinthians. No dia 21,
+            Palmeiras x Flamengo promete ser o jogo que define o campeão.
           </p>
+          <p class="rotulo text-(--legenda) mt-4">2 nov 2026</p>
         </article>
 
-        <article class="py-6 border-t fio md:border-t-0 md:py-0 md:pl-8">
-          <span class="titulo text-6xl font-black text-(--verm)">03</span>
-          <h3 class="titulo text-2xl font-bold mt-2 mb-3">Soberano</h3>
+        <article class="border-t-2 fio pt-4">
+          <img src="./img/noticias/noticia4.jpg" alt="Carlo Ancelotti fala em entrevista coletiva da Seleção Brasileira"
+            class="w-full aspect-[4/3] object-cover mb-2" />
+          <p class="text-xs italic text-(--legenda) mb-3">Foto: Flashscore</p>
+          <p class="rotulo text-(--verm) mb-2">Seleção</p>
+          <h3 class="titulo titulo-card font-bold mb-3">Ancelotti renova a Seleção para os últimos jogos do ano</h3>
           <p class="leading-relaxed">
-            Uma galeria pesada com 6 Campeonatos Brasileiros, 3 Copas Libertadores
-            e 1 Copa do Brasil.
+            A lista para os amistosos contra Japão e Singapura, dias 14 e 17 em
+            Singapura, traz caras novas e aposta em quem joga no Brasileirão.
           </p>
+          <p class="rotulo text-(--legenda) mt-4">29 out 2026</p>
+        </article>
+
+        <article class="border-t-2 fio pt-4">
+          <img src="./img/noticias/noticia5.webp" alt="Lamine Yamal sorrindo com a camisa do Barcelona"
+            class="w-full aspect-[4/3] object-cover mb-2" />
+          <p class="text-xs italic text-(--legenda) mb-3">Foto: Football360</p>
+          <p class="rotulo text-(--verm) mb-2">Champions League</p>
+          <h3 class="titulo titulo-card font-bold mb-3">Lamine Yamal bate recorde e Barça atropela o Aston Villa</h3>
+          <p class="leading-relaxed">
+            No 3 a 0 do Barcelona, o jovem atacante virou o adolescente com mais
+            gols da história da Champions.
+          </p>
+          <p class="rotulo text-(--legenda) mt-4">3 nov 2026</p>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="mt-auto border-t-2 fio max-w-6xl w-full mx-auto px-5 py-6 rotulo
-                 flex flex-col gap-2 md:flex-row md:justify-between text-(--legenda)">
-    <span>São Paulo FC · Edição Histórica</span>
-    <span>Desenvolvido para a aula de Design Digital &copy; 2026</span>
+  <footer class="mt-auto bg-(--tinta) text-white">
+    <div class="max-w-[1440px] mx-auto px-[4vw] py-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <span class="titulo text-3xl font-black">Placar <em class="text-(--verm)">Diário</em></span>
+      <span class="rotulo text-white/70">Trabalho de Design Digital &copy; 2026</span>
+    </div>
   </footer>
 </body>
 

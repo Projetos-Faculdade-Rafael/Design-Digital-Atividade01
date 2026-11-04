@@ -1,4 +1,3 @@
-/* Tema "Revista Esportiva" */
 :root {
   --papel: #f5f0e8;
   --tinta: #141414;
@@ -6,13 +5,23 @@
   --legenda: #6b6457;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background-color: var(--papel);
-  /* textura leve de papel, só com CSS */
   background-image: radial-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px);
   background-size: 4px 4px;
   color: var(--tinta);
   font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .titulo {
@@ -22,8 +31,28 @@ body {
 .rotulo {
   font-family: "Inter", Arial, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  font-size: clamp(0.68rem, 0.64rem + 0.15vw, 0.8rem);
+}
+
+.marca {
+  font-size: clamp(2.6rem, 8vw, 7.5rem);
+  line-height: 0.9;
+}
+
+.manchete {
+  font-size: clamp(2rem, 4.2vw, 4.6rem);
+  line-height: 1;
+}
+
+.titulo-pagina {
+  font-size: clamp(2.4rem, 6vw, 6rem);
+  line-height: 0.95;
+}
+
+.titulo-card {
+  font-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.75rem);
+  line-height: 1.15;
 }
 
 .fio {
@@ -40,6 +69,15 @@ body {
   font-weight: 700;
 }
 
+.ticker {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.ticker::-webkit-scrollbar {
+  display: none;
+}
+
 ::selection {
   background: var(--verm);
   color: #fff;
@@ -54,7 +92,6 @@ summary:focus-visible {
   outline-offset: 3px;
 }
 
-/* menu mobile: some o triângulo padrão do <summary> */
 summary::-webkit-details-marker {
   display: none;
 }
