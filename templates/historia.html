@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Placar Diário - Quem Somos{% endblock %}
+
+{% block content %}
+  <main class="max-w-[1440px] w-full mx-auto px-[4vw] py-12 md:py-20 flex flex-col gap-14 md:gap-24">
+
+    <section class="grid gap-8 lg:gap-14 lg:grid-cols-12 items-end">
+      <h1 class="display titulo-pagina font-black lg:col-span-7">A bola rola, a gente conta.</h1>
+
+      <div class="painel p-6 md:p-10 lg:col-span-5 text-lg">
+        <p class="mb-5">
+          O Placar Diário é um jornal feito por quem vive o futebol. Nosso
+          trabalho é trazer as notícias mais recentes e mais quentes do mundo da
+          bola: do clássico de domingo à rodada da Champions, da convocação da
+          Seleção ao mercado da bola.
+        </p>
+        <p class="text-(--apagado)">
+          Falamos a língua da arquibancada, mas com a apuração de redação: notícia
+          checada, contexto claro e opinião só quando ela é avisada.
+        </p>
+      </div>
+    </section>
+
+    <section class="painel p-6 md:p-10">
+      <h2 class="display text-4xl md:text-5xl font-black mb-8">O que cobrimos</h2>
+
+      <div class="grid gap-8 md:grid-cols-3 md:gap-0 md:divide-x-2 md:divide-dashed divide-(--grama)/40">
+        <div class="md:pr-8">
+          <h3 class="display titulo-card font-extrabold mb-3">Futebol brasileiro</h3>
+          <p>
+            Brasileirão, Copa do Brasil, estaduais e a Seleção. Tudo que mexe com
+            o torcedor daqui, rodada a rodada.
+          </p>
+        </div>
+
+        <div class="md:px-8">
+          <h3 class="display titulo-card font-extrabold mb-3">Futebol mundial</h3>
+          <p>
+            Libertadores, Champions e as grandes ligas da Europa, com olho
+            especial nos brasileiros que jogam lá fora.
+          </p>
+        </div>
+
+        <div class="md:pl-8">
+          <h3 class="display titulo-card font-extrabold mb-3">Feito com o leitor</h3>
+          <p>
+            Viu algo acontecer? Nossa redação está aberta: o torcedor também
+            pode mandar a notícia para a gente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-center border-y-[3px] linha-cal py-12 md:py-16">
+      <p class="display text-4xl md:text-6xl font-black max-w-4xl mx-auto leading-none mb-10">
+        “Notícia boa é notícia quente, checada e contada do jeito que o torcedor fala.”
+      </p>
+      <a href="{{ url_for('m1to') }}" class="botao no-underline">Enviar uma notícia</a>
+    </section>
+  </main>
+{% endblock %}

@@ -1,59 +1,13 @@
-<!doctype html>
-<html lang="pt-br">
+{% extends "base.html" %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placar Diário - Capa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
+{% block title %}Placar Diário - Capa{% endblock %}
 
-<body class="min-h-screen flex flex-col">
-
-  <div class="placar-linha">
-    <div class="max-w-[1440px] mx-auto px-[4vw] py-2 flex items-center gap-8 whitespace-nowrap display text-lg font-bold">
-      <span class="text-(--lampada)">Champions League</span>
-      <span>Man United <span class="gol">3</span> <span class="gol">2</span> Roma</span>
-      <span>Barcelona <span class="gol">3</span> <span class="gol">0</span> Aston Villa</span>
-      <span>PSG <span class="gol">6</span> <span class="gol">0</span> Villarreal</span>
-      <span>Atlético <span class="gol">0</span> <span class="gol">2</span> Bayern</span>
-      <span>Inter <span class="gol">3</span> <span class="gol">0</span> Feyenoord</span>
-    </div>
-  </div>
-
-  <header class="campo">
-    <div class="max-w-[1440px] mx-auto px-[4vw] pt-4 campo-conteudo">
-      <div class="flex justify-between gap-4 text-sm text-white/75">
-        <span>Quarta-feira, 4 de novembro de 2026</span>
-        <span>Edição 1</span>
-      </div>
-
-      <a href="index.html" aria-label="Placar Diário, página inicial" class="marca mt-8 md:mt-12 no-underline">
-        <span class="palavra" aria-hidden="true">
-          <span class="letra" style="--i:0">P</span><span class="letra" style="--i:1">L</span><span class="letra" style="--i:2">A</span><span class="letra" style="--i:3">C</span><span class="letra" style="--i:4">A</span><span class="letra" style="--i:5">R</span>
-        </span>
-        <span class="palavra palavra-destaque" aria-hidden="true">
-          <span class="letra" style="--i:6">D</span><span class="letra" style="--i:7">I</span><span class="letra" style="--i:8">Á</span><span class="letra" style="--i:9">R</span><span class="letra" style="--i:10">I</span><span class="letra" style="--i:11">O</span>
-        </span>
-      </a>
-
-      <nav class="mt-8 md:mt-10 flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-x-10 display text-xl md:text-2xl font-bold">
-        <a href="index.html" class="ativo px-1 no-underline">Capa</a>
-        <a href="historia.html" class="px-1 text-(--cal) no-underline hover:text-(--lampada)">Quem somos</a>
-        <a href="m1to.html" class="px-1 text-(--cal) no-underline hover:text-(--lampada)">Envie sua notícia</a>
-      </nav>
-    </div>
-  </header>
-
+{% block content %}
   <main class="max-w-[1440px] w-full mx-auto px-[4vw] py-10 md:py-16 flex flex-col gap-12 md:gap-16">
 
     <article class="painel overflow-hidden grid lg:grid-cols-12">
       <figure class="relative lg:col-span-7">
-        <img src="./img/noticias/noticia1.jpg" alt="Jogadores do Palmeiras comemorando à beira do campo"
+        <img src="{{ url_for('static', filename='img/noticias/noticia1.jpg') }}" alt="Jogadores do Palmeiras comemorando à beira do campo"
           class="w-full h-full aspect-[16/10] lg:aspect-auto lg:min-h-[480px] object-cover" />
         <figcaption class="absolute bottom-0 left-0 bg-(--placar)/85 text-(--cal) text-xs px-3 py-1">Foto: Terra</figcaption>
       </figure>
@@ -81,7 +35,7 @@
       <div class="grid gap-6 md:grid-cols-2">
         <article class="painel overflow-hidden grid sm:grid-cols-[2fr_3fr]">
           <figure class="relative">
-            <img src="./img/noticias/noticia2.jpg" alt="Matheus Cunha comemora gol sem camisa pelo Manchester United"
+            <img src="{{ url_for('static', filename='img/noticias/noticia2.jpg') }}" alt="Matheus Cunha comemora gol sem camisa pelo Manchester United"
               class="w-full h-full aspect-[16/10] sm:aspect-auto sm:min-h-[260px] object-cover object-[35%_center]" />
             <figcaption class="absolute bottom-0 left-0 bg-(--placar)/85 text-(--cal) text-xs px-3 py-1">Foto: ESPN</figcaption>
           </figure>
@@ -98,7 +52,7 @@
 
         <article class="painel overflow-hidden grid sm:grid-cols-[2fr_3fr]">
           <figure class="relative">
-            <img src="./img/noticias/noticia3.webp" alt="Estádio do Maracanã vazio com gramado e arquibancadas coloridas"
+            <img src="{{ url_for('static', filename='img/noticias/noticia3.webp') }}" alt="Estádio do Maracanã vazio com gramado e arquibancadas coloridas"
               class="w-full h-full aspect-[16/10] sm:aspect-auto sm:min-h-[260px] object-cover" />
             <figcaption class="absolute bottom-0 left-0 bg-(--placar)/85 text-(--cal) text-xs px-3 py-1">Foto: NC News</figcaption>
           </figure>
@@ -115,7 +69,7 @@
 
         <article class="painel overflow-hidden grid sm:grid-cols-[2fr_3fr]">
           <figure class="relative">
-            <img src="./img/noticias/noticia4.jpg" alt="Carlo Ancelotti fala em entrevista coletiva da Seleção Brasileira"
+            <img src="{{ url_for('static', filename='img/noticias/noticia4.jpg') }}" alt="Carlo Ancelotti fala em entrevista coletiva da Seleção Brasileira"
               class="w-full h-full aspect-[16/10] sm:aspect-auto sm:min-h-[260px] object-cover" />
             <figcaption class="absolute bottom-0 left-0 bg-(--placar)/85 text-(--cal) text-xs px-3 py-1">Foto: Flashscore</figcaption>
           </figure>
@@ -132,7 +86,7 @@
 
         <article class="painel overflow-hidden grid sm:grid-cols-[2fr_3fr]">
           <figure class="relative">
-            <img src="./img/noticias/noticia5.webp" alt="Lamine Yamal sorrindo com a camisa do Barcelona"
+            <img src="{{ url_for('static', filename='img/noticias/noticia5.webp') }}" alt="Lamine Yamal sorrindo com a camisa do Barcelona"
               class="w-full h-full aspect-[16/10] sm:aspect-auto sm:min-h-[260px] object-cover" />
             <figcaption class="absolute bottom-0 left-0 bg-(--placar)/85 text-(--cal) text-xs px-3 py-1">Foto: Football360</figcaption>
           </figure>
@@ -149,13 +103,4 @@
       </div>
     </section>
   </main>
-
-  <footer class="mt-auto bg-(--placar)">
-    <div class="max-w-[1440px] mx-auto px-[4vw] py-8 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-      <span class="display text-3xl font-black">Placar <span class="text-(--lampada)">Diário</span></span>
-      <span class="text-sm text-white/70">Trabalho de Design Digital, 2026</span>
-    </div>
-  </footer>
-</body>
-
-</html>
+{% endblock %}

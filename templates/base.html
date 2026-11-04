@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placar Diário - Envie sua Notícia</title>
+  <title>{% block title %}Placar Diário{% endblock %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -32,7 +32,7 @@
         <span>Edição 1</span>
       </div>
 
-      <a href="index.html" aria-label="Placar Diário, página inicial" class="marca mt-8 md:mt-12 no-underline">
+      <a href="{{ url_for('index') }}" aria-label="Placar Diário, página inicial" class="marca mt-8 md:mt-12 no-underline">
         <span class="palavra" aria-hidden="true">
           <span class="letra" style="--i:0">P</span><span class="letra" style="--i:1">L</span><span class="letra" style="--i:2">A</span><span class="letra" style="--i:3">C</span><span class="letra" style="--i:4">A</span><span class="letra" style="--i:5">R</span>
         </span>
@@ -42,57 +42,19 @@
       </a>
 
       <nav class="mt-8 md:mt-10 flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-x-10 display text-xl md:text-2xl font-bold">
-        <a href="index.html" class="px-1 text-(--cal) no-underline hover:text-(--lampada)">Capa</a>
-        <a href="historia.html" class="px-1 text-(--cal) no-underline hover:text-(--lampada)">Quem somos</a>
-        <a href="m1to.html" class="ativo px-1 no-underline">Envie sua notícia</a>
+        <a href="{{ url_for('index') }}" class="px-1 no-underline {{ 'ativo' if request.endpoint == 'index' else 'text-(--cal) hover:text-(--lampada)' }}">Capa</a>
+        <a href="{{ url_for('historia') }}" class="px-1 no-underline {{ 'ativo' if request.endpoint == 'historia' else 'text-(--cal) hover:text-(--lampada)' }}">Quem somos</a>
+        <a href="{{ url_for('m1to') }}" class="px-1 no-underline {{ 'ativo' if request.endpoint == 'm1to' else 'text-(--cal) hover:text-(--lampada)' }}">Envie sua notícia</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-[1440px] w-full mx-auto px-[4vw] py-12 md:py-20">
-    <section class="grid gap-10 lg:gap-14 lg:grid-cols-12 items-start">
-      <div class="lg:col-span-5">
-        <h1 class="display titulo-pagina font-black mb-6">Tem notícia quente?</h1>
-        <p class="text-lg mb-4 max-w-[46ch]">
-          Viu algo acontecer no seu time, no estádio ou no mercado da bola?
-          Manda pra gente. Toda sugestão passa pela nossa redação antes de virar
-          matéria.
-        </p>
-        <p class="text-white/75 max-w-[46ch]">
-          Escreva um título curto e uma breve explicação do que aconteceu.
-        </p>
-      </div>
-
-      <form action="#" method="post" class="painel overflow-hidden lg:col-span-7">
-        <div class="bg-(--placar) text-(--cal) px-6 md:px-10 py-4 flex flex-wrap justify-between items-baseline gap-x-4">
-          <span class="display text-2xl md:text-3xl font-black">Súmula da notícia</span>
-          <span class="display text-lg font-bold text-(--lampada)">Placar Diário</span>
-        </div>
-
-        <div class="p-6 md:p-10 flex flex-col gap-8">
-          <div>
-            <label for="titulo" class="block font-bold mb-1">Título da notícia</label>
-            <input type="text" id="titulo" name="titulo" maxlength="150" placeholder="Ex.: Clube anuncia novo técnico" required
-              class="display w-full bg-transparent border-0 border-b-2 border-(--tinta) py-2 text-2xl md:text-3xl font-extrabold
-                     focus:border-(--grama)" />
-          </div>
-
-          <div>
-            <label for="resumo" class="block font-bold mb-1">Breve explicação</label>
-            <textarea id="resumo" name="resumo" rows="6" maxlength="1000" placeholder="Conte o que aconteceu, quando e onde." required
-              class="sumula-pauta w-full bg-transparent border-0 border-b-2 border-(--tinta) resize-y focus:border-(--grama)"></textarea>
-          </div>
-
-          <button type="submit" class="botao self-start cursor-pointer">Enviar notícia</button>
-        </div>
-      </form>
-    </section>
-  </main>
+  {% block content %}{% endblock %}
 
   <footer class="mt-auto bg-(--placar)">
     <div class="max-w-[1440px] mx-auto px-[4vw] py-8 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
       <span class="display text-3xl font-black">Placar <span class="text-(--lampada)">Diário</span></span>
-      <span class="text-sm text-white/70">Trabalho de Design Digital, 2026</span>
+      <span class="text-sm text-white/70">SEU NOME COMPLETO · Atividade 3 – Deploy Flask na AWS EC2</span>
     </div>
   </footer>
 </body>
