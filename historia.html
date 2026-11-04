@@ -7,124 +7,109 @@
   <title>Placar Diário - Quem Somos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
 
-  <div class="bg-(--tinta) text-white">
-    <div class="ticker max-w-[1440px] mx-auto px-[4vw] py-2 flex gap-8 whitespace-nowrap rotulo">
-      <span class="text-(--verm) font-bold">Champions</span>
-      <span>Man United 3 × 2 Roma</span>
-      <span>Barcelona 3 × 0 Aston Villa</span>
-      <span>PSG 6 × 0 Villarreal</span>
-      <span>Atlético 0 × 2 Bayern</span>
-      <span>Inter 3 × 0 Feyenoord</span>
+  <div class="placar-linha">
+    <div class="max-w-[1440px] mx-auto px-[4vw] py-2 flex items-center gap-8 whitespace-nowrap display text-lg font-bold">
+      <span class="text-(--lampada)">Champions League</span>
+      <span>Man United <span class="gol">3</span> <span class="gol">2</span> Roma</span>
+      <span>Barcelona <span class="gol">3</span> <span class="gol">0</span> Aston Villa</span>
+      <span>PSG <span class="gol">6</span> <span class="gol">0</span> Villarreal</span>
+      <span>Atlético <span class="gol">0</span> <span class="gol">2</span> Bayern</span>
+      <span>Inter <span class="gol">3</span> <span class="gol">0</span> Feyenoord</span>
     </div>
   </div>
 
-  <header class="max-w-[1440px] w-full mx-auto px-[4vw] pt-5">
-    <div class="rotulo flex justify-between gap-4 border-b fio pb-2 text-(--legenda)">
-      <span>Quarta-feira, 4 de novembro de 2026</span>
-      <span class="hidden sm:inline">Edição nº 1</span>
-    </div>
-
-    <div class="flex items-center justify-between md:justify-center gap-4 py-4 md:py-6">
-      <a href="index.html" class="titulo marca font-black tracking-tight no-underline text-(--tinta)">
-        Placar <em class="text-(--verm)">Diário</em>
-      </a>
-
-      <details class="relative md:hidden">
-        <summary class="rotulo cursor-pointer list-none border fio px-3 py-2">Menu</summary>
-        <nav class="rotulo absolute right-0 top-full mt-2 flex w-52 flex-col gap-4 bg-(--papel) border fio p-4 z-10">
-          <a href="index.html" class="text-(--tinta) no-underline hover:text-(--verm)">Capa</a>
-          <a href="historia.html" class="text-(--verm) underline underline-offset-4">Quem Somos</a>
-          <a href="m1to.html" class="text-(--tinta) no-underline hover:text-(--verm)">Envie sua Notícia</a>
-        </nav>
-      </details>
-    </div>
-
-    <nav class="rotulo hidden md:flex justify-center gap-12 border-y-2 fio py-3">
-      <a href="index.html" class="text-(--tinta) no-underline hover:text-(--verm)">Capa</a>
-      <a href="historia.html" class="text-(--verm) underline underline-offset-4 decoration-2">Quem Somos</a>
-      <a href="m1to.html" class="text-(--tinta) no-underline hover:text-(--verm)">Envie sua Notícia</a>
-    </nav>
-  </header>
-
-  <main class="max-w-[1440px] w-full mx-auto px-[4vw]">
-
-    <section class="grid gap-8 lg:gap-16 py-10 md:py-16 lg:grid-cols-12 border-b fio">
-      <div class="lg:col-span-7">
-        <p class="rotulo text-(--verm) mb-4">Quem Somos</p>
-        <h1 class="titulo titulo-pagina font-black">
-          A bola rola, <em class="text-(--verm)">a gente conta.</em>
-        </h1>
+  <header class="campo">
+    <div class="max-w-[1440px] mx-auto px-[4vw] pt-4 campo-conteudo">
+      <div class="flex justify-between gap-4 text-sm text-white/75">
+        <span>Quarta-feira, 4 de novembro de 2026</span>
+        <span>Edição 1</span>
       </div>
 
-      <div class="lg:col-span-5 flex flex-col justify-end text-lg leading-relaxed">
-        <p class="dropcap mb-5">
+      <a href="index.html" aria-label="Placar Diário, página inicial" class="marca mt-8 md:mt-12 no-underline">
+        <span class="palavra" aria-hidden="true">
+          <span class="letra" style="--i:0">P</span><span class="letra" style="--i:1">L</span><span class="letra" style="--i:2">A</span><span class="letra" style="--i:3">C</span><span class="letra" style="--i:4">A</span><span class="letra" style="--i:5">R</span>
+        </span>
+        <span class="palavra palavra-destaque" aria-hidden="true">
+          <span class="letra" style="--i:6">D</span><span class="letra" style="--i:7">I</span><span class="letra" style="--i:8">Á</span><span class="letra" style="--i:9">R</span><span class="letra" style="--i:10">I</span><span class="letra" style="--i:11">O</span>
+        </span>
+      </a>
+
+      <nav class="mt-8 md:mt-10 flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-x-10 display text-xl md:text-2xl font-bold">
+        <a href="index.html" class="px-1 text-(--cal) no-underline hover:text-(--lampada)">Capa</a>
+        <a href="historia.html" class="ativo px-1 no-underline">Quem somos</a>
+        <a href="m1to.html" class="px-1 text-(--cal) no-underline hover:text-(--lampada)">Envie sua notícia</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-[1440px] w-full mx-auto px-[4vw] py-12 md:py-20 flex flex-col gap-14 md:gap-24">
+
+    <section class="grid gap-8 lg:gap-14 lg:grid-cols-12 items-end">
+      <h1 class="display titulo-pagina font-black lg:col-span-7">A bola rola, a gente conta.</h1>
+
+      <div class="painel p-6 md:p-10 lg:col-span-5 text-lg">
+        <p class="mb-5">
           O Placar Diário é um jornal feito por quem vive o futebol. Nosso
           trabalho é trazer as notícias mais recentes e mais quentes do mundo da
           bola: do clássico de domingo à rodada da Champions, da convocação da
           Seleção ao mercado da bola.
         </p>
-        <p class="text-(--legenda)">
+        <p class="text-(--apagado)">
           Falamos a língua da arquibancada, mas com a apuração de redação: notícia
           checada, contexto claro e opinião só quando ela é avisada.
         </p>
       </div>
     </section>
 
-    <section class="py-10 md:py-16 border-b fio">
-      <h2 class="rotulo mb-8">O que cobrimos</h2>
+    <section class="painel p-6 md:p-10">
+      <h2 class="display text-4xl md:text-5xl font-black mb-8">O que cobrimos</h2>
 
-      <div class="grid gap-10 md:grid-cols-3 md:gap-0 md:divide-x divide-(--tinta)">
-        <article class="md:pr-10">
-          <span class="titulo text-6xl font-black text-(--verm)">01</span>
-          <h3 class="titulo titulo-card font-bold mt-3 mb-3">Futebol brasileiro</h3>
-          <p class="leading-relaxed">
+      <div class="grid gap-8 md:grid-cols-3 md:gap-0 md:divide-x-2 md:divide-dashed divide-(--grama)/40">
+        <div class="md:pr-8">
+          <h3 class="display titulo-card font-extrabold mb-3">Futebol brasileiro</h3>
+          <p>
             Brasileirão, Copa do Brasil, estaduais e a Seleção. Tudo que mexe com
             o torcedor daqui, rodada a rodada.
           </p>
-        </article>
+        </div>
 
-        <article class="md:px-10">
-          <span class="titulo text-6xl font-black text-(--verm)">02</span>
-          <h3 class="titulo titulo-card font-bold mt-3 mb-3">Futebol mundial</h3>
-          <p class="leading-relaxed">
+        <div class="md:px-8">
+          <h3 class="display titulo-card font-extrabold mb-3">Futebol mundial</h3>
+          <p>
             Libertadores, Champions e as grandes ligas da Europa, com olho
             especial nos brasileiros que jogam lá fora.
           </p>
-        </article>
+        </div>
 
-        <article class="md:pl-10">
-          <span class="titulo text-6xl font-black text-(--verm)">03</span>
-          <h3 class="titulo titulo-card font-bold mt-3 mb-3">Feito com o leitor</h3>
-          <p class="leading-relaxed">
+        <div class="md:pl-8">
+          <h3 class="display titulo-card font-extrabold mb-3">Feito com o leitor</h3>
+          <p>
             Viu algo acontecer? Nossa redação está aberta: o torcedor também
             pode mandar a notícia para a gente.
           </p>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="py-12 md:py-20 text-center">
-      <p class="titulo text-3xl md:text-5xl italic font-bold mb-8 max-w-4xl mx-auto leading-tight">
+    <section class="text-center border-y-[3px] linha-cal py-12 md:py-16">
+      <p class="display text-4xl md:text-6xl font-black max-w-4xl mx-auto leading-none mb-10">
         “Notícia boa é notícia quente, checada e contada do jeito que o torcedor fala.”
       </p>
-      <a href="m1to.html" class="rotulo inline-block bg-(--tinta) text-white px-8 py-4 no-underline
-               hover:bg-(--verm) transition-colors">
-        Envie sua notícia →
-      </a>
+      <a href="m1to.html" class="botao no-underline">Enviar uma notícia</a>
     </section>
   </main>
 
-  <footer class="mt-auto bg-(--tinta) text-white">
-    <div class="max-w-[1440px] mx-auto px-[4vw] py-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-      <span class="titulo text-3xl font-black">Placar <em class="text-(--verm)">Diário</em></span>
-      <span class="rotulo text-white/70">Trabalho de Design Digital &copy; 2026</span>
+  <footer class="mt-auto bg-(--placar)">
+    <div class="max-w-[1440px] mx-auto px-[4vw] py-8 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <span class="display text-3xl font-black">Placar <span class="text-(--lampada)">Diário</span></span>
+      <span class="text-sm text-white/70">Trabalho de Design Digital, 2026</span>
     </div>
   </footer>
 </body>

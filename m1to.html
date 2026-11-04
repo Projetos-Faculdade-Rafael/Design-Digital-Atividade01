@@ -7,97 +7,92 @@
   <title>Placar Diário - Envie sua Notícia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
 
-  <div class="bg-(--tinta) text-white">
-    <div class="ticker max-w-[1440px] mx-auto px-[4vw] py-2 flex gap-8 whitespace-nowrap rotulo">
-      <span class="text-(--verm) font-bold">Champions</span>
-      <span>Man United 3 × 2 Roma</span>
-      <span>Barcelona 3 × 0 Aston Villa</span>
-      <span>PSG 6 × 0 Villarreal</span>
-      <span>Atlético 0 × 2 Bayern</span>
-      <span>Inter 3 × 0 Feyenoord</span>
+  <div class="placar-linha">
+    <div class="max-w-[1440px] mx-auto px-[4vw] py-2 flex items-center gap-8 whitespace-nowrap display text-lg font-bold">
+      <span class="text-(--lampada)">Champions League</span>
+      <span>Man United <span class="gol">3</span> <span class="gol">2</span> Roma</span>
+      <span>Barcelona <span class="gol">3</span> <span class="gol">0</span> Aston Villa</span>
+      <span>PSG <span class="gol">6</span> <span class="gol">0</span> Villarreal</span>
+      <span>Atlético <span class="gol">0</span> <span class="gol">2</span> Bayern</span>
+      <span>Inter <span class="gol">3</span> <span class="gol">0</span> Feyenoord</span>
     </div>
   </div>
 
-  <header class="max-w-[1440px] w-full mx-auto px-[4vw] pt-5">
-    <div class="rotulo flex justify-between gap-4 border-b fio pb-2 text-(--legenda)">
-      <span>Quarta-feira, 4 de novembro de 2026</span>
-      <span class="hidden sm:inline">Edição nº 1</span>
-    </div>
+  <header class="campo">
+    <div class="max-w-[1440px] mx-auto px-[4vw] pt-4 campo-conteudo">
+      <div class="flex justify-between gap-4 text-sm text-white/75">
+        <span>Quarta-feira, 4 de novembro de 2026</span>
+        <span>Edição 1</span>
+      </div>
 
-    <div class="flex items-center justify-between md:justify-center gap-4 py-4 md:py-6">
-      <a href="index.html" class="titulo marca font-black tracking-tight no-underline text-(--tinta)">
-        Placar <em class="text-(--verm)">Diário</em>
+      <a href="index.html" aria-label="Placar Diário, página inicial" class="marca mt-8 md:mt-12 no-underline">
+        <span class="palavra" aria-hidden="true">
+          <span class="letra" style="--i:0">P</span><span class="letra" style="--i:1">L</span><span class="letra" style="--i:2">A</span><span class="letra" style="--i:3">C</span><span class="letra" style="--i:4">A</span><span class="letra" style="--i:5">R</span>
+        </span>
+        <span class="palavra palavra-destaque" aria-hidden="true">
+          <span class="letra" style="--i:6">D</span><span class="letra" style="--i:7">I</span><span class="letra" style="--i:8">Á</span><span class="letra" style="--i:9">R</span><span class="letra" style="--i:10">I</span><span class="letra" style="--i:11">O</span>
+        </span>
       </a>
 
-      <details class="relative md:hidden">
-        <summary class="rotulo cursor-pointer list-none border fio px-3 py-2">Menu</summary>
-        <nav class="rotulo absolute right-0 top-full mt-2 flex w-52 flex-col gap-4 bg-(--papel) border fio p-4 z-10">
-          <a href="index.html" class="text-(--tinta) no-underline hover:text-(--verm)">Capa</a>
-          <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">Quem Somos</a>
-          <a href="m1to.html" class="text-(--verm) underline underline-offset-4">Envie sua Notícia</a>
-        </nav>
-      </details>
+      <nav class="mt-8 md:mt-10 flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-x-10 display text-xl md:text-2xl font-bold">
+        <a href="index.html" class="px-1 text-(--cal) no-underline hover:text-(--lampada)">Capa</a>
+        <a href="historia.html" class="px-1 text-(--cal) no-underline hover:text-(--lampada)">Quem somos</a>
+        <a href="m1to.html" class="ativo px-1 no-underline">Envie sua notícia</a>
+      </nav>
     </div>
-
-    <nav class="rotulo hidden md:flex justify-center gap-12 border-y-2 fio py-3">
-      <a href="index.html" class="text-(--tinta) no-underline hover:text-(--verm)">Capa</a>
-      <a href="historia.html" class="text-(--tinta) no-underline hover:text-(--verm)">Quem Somos</a>
-      <a href="m1to.html" class="text-(--verm) underline underline-offset-4 decoration-2">Envie sua Notícia</a>
-    </nav>
   </header>
 
-  <main class="max-w-[1440px] w-full mx-auto px-[4vw]">
-    <section class="grid gap-10 lg:gap-16 py-10 md:py-16 lg:grid-cols-12">
+  <main class="max-w-[1440px] w-full mx-auto px-[4vw] py-12 md:py-20">
+    <section class="grid gap-10 lg:gap-14 lg:grid-cols-12 items-start">
       <div class="lg:col-span-5">
-        <p class="rotulo text-(--verm) mb-4">Envie sua Notícia</p>
-        <h1 class="titulo titulo-pagina font-black mb-6">
-          Tem notícia <em class="text-(--verm)">quente?</em>
-        </h1>
-        <p class="text-lg leading-relaxed mb-4">
+        <h1 class="display titulo-pagina font-black mb-6">Tem notícia quente?</h1>
+        <p class="text-lg mb-4 max-w-[46ch]">
           Viu algo acontecer no seu time, no estádio ou no mercado da bola?
           Manda pra gente. Toda sugestão passa pela nossa redação antes de virar
           matéria.
         </p>
-        <p class="text-(--legenda) leading-relaxed">
+        <p class="text-white/75 max-w-[46ch]">
           Escreva um título curto e uma breve explicação do que aconteceu.
         </p>
       </div>
 
-      <form action="#" method="post"
-        class="lg:col-span-7 flex flex-col gap-8 border-t-2 fio pt-8 lg:border-t-0 lg:border-l-2 lg:pt-0 lg:pl-16">
-        <div>
-          <label for="titulo" class="rotulo block mb-2">Título da notícia</label>
-          <input type="text" id="titulo" name="titulo" maxlength="150" placeholder="Ex.: Clube anuncia novo técnico" required
-            class="titulo w-full bg-transparent border-0 border-b-2 border-(--tinta) py-2 text-xl md:text-3xl font-bold
-                   focus:border-(--verm) placeholder:text-(--legenda)/60" />
+      <form action="#" method="post" class="painel overflow-hidden lg:col-span-7">
+        <div class="bg-(--placar) text-(--cal) px-6 md:px-10 py-4 flex flex-wrap justify-between items-baseline gap-x-4">
+          <span class="display text-2xl md:text-3xl font-black">Súmula da notícia</span>
+          <span class="display text-lg font-bold text-(--lampada)">Placar Diário</span>
         </div>
 
-        <div>
-          <label for="resumo" class="rotulo block mb-2">Breve explicação</label>
-          <textarea id="resumo" name="resumo" rows="6" maxlength="1000" placeholder="Conte o que aconteceu, quando e onde..." required
-            class="w-full bg-transparent border-0 border-b-2 border-(--tinta) py-2 text-lg leading-relaxed resize-y
-                   focus:border-(--verm) placeholder:text-(--legenda)/60"></textarea>
-        </div>
+        <div class="p-6 md:p-10 flex flex-col gap-8">
+          <div>
+            <label for="titulo" class="block font-bold mb-1">Título da notícia</label>
+            <input type="text" id="titulo" name="titulo" maxlength="150" placeholder="Ex.: Clube anuncia novo técnico" required
+              class="display w-full bg-transparent border-0 border-b-2 border-(--tinta) py-2 text-2xl md:text-3xl font-extrabold
+                     focus:border-(--grama)" />
+          </div>
 
-        <button type="submit" class="rotulo self-start bg-(--tinta) text-white px-10 py-4 cursor-pointer
-                 hover:bg-(--verm) transition-colors">
-          Enviar notícia →
-        </button>
+          <div>
+            <label for="resumo" class="block font-bold mb-1">Breve explicação</label>
+            <textarea id="resumo" name="resumo" rows="6" maxlength="1000" placeholder="Conte o que aconteceu, quando e onde." required
+              class="sumula-pauta w-full bg-transparent border-0 border-b-2 border-(--tinta) resize-y focus:border-(--grama)"></textarea>
+          </div>
+
+          <button type="submit" class="botao self-start cursor-pointer">Enviar notícia</button>
+        </div>
       </form>
     </section>
   </main>
 
-  <footer class="mt-auto bg-(--tinta) text-white">
-    <div class="max-w-[1440px] mx-auto px-[4vw] py-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-      <span class="titulo text-3xl font-black">Placar <em class="text-(--verm)">Diário</em></span>
-      <span class="rotulo text-white/70">Trabalho de Design Digital &copy; 2026</span>
+  <footer class="mt-auto bg-(--placar)">
+    <div class="max-w-[1440px] mx-auto px-[4vw] py-8 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <span class="display text-3xl font-black">Placar <span class="text-(--lampada)">Diário</span></span>
+      <span class="text-sm text-white/70">Trabalho de Design Digital, 2026</span>
     </div>
   </footer>
 </body>
